@@ -1,0 +1,22 @@
+{
+  "description": "Execute the replica provision puppet command ",
+  "parameters": {
+    "replica": {
+      "type": "String",
+      "description": "The name of the replica to provision"
+    },
+    "token_file": {
+      "type": "Optional[String]",
+      "description": "The name of the token-file for auth"
+    },
+    "legacy": {
+      "type": "Boolean",
+      "description": "Set to true if provisioning a replica for PE 2019.5 or older. Defaults to false",
+      "default": false
+    }
+  },
+  "input_method": "environment",
+  "implementations": [
+    {"name": "provision_replica.sh"}
+  ]
+}

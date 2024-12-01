@@ -1,0 +1,27 @@
+{
+  "description": "Download a file using curl",
+  "parameters": {
+    "source": {
+      "type": "String",
+      "description": "Where to download the file from"
+    },
+    "path": {
+      "type": "String",
+      "description": "Where to save the downloaded file"
+    },
+    "verify_download": {
+      "type": "Boolean",
+      "description": "Whether to check the integrity of the downloaded file",
+      "default": true
+    },
+    "key_server": {
+      "type": "String",
+      "description": "The GPG keyserver to retrieve GPG keys from",
+      "default": "hkp://keyserver.ubuntu.com:80"
+    }
+  },
+  "implementations": [
+    {"name": "download.sh", "requirements": ["shell"],  "input_method": "environment"},
+    {"name": "download.ps1", "requirements": ["powershell"], "input_method": "powershell"}
+    ]
+}

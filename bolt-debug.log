@@ -1,0 +1,15 @@
+2024-10-27T01:37:19.156053 INFO   [main] [Bolt::Logger] Loaded project from '/root/control-repo'
+2024-10-27T01:37:19.156252 DEBUG  [main] [Bolt::Logger] Analytics opt-out is set, analytics will be disabled
+2024-10-27T01:37:19.210153 DEBUG  [main] [Bolt::Executor] Started with 100 max thread(s)
+2024-10-27T01:37:19.571574 DEBUG  [main] [Bolt::PAL] Loading modules from /opt/puppetlabs/bolt/lib/ruby/gems/2.7.0/gems/bolt-3.30.0/bolt-modules:/root/control-repo/modules:/root/control-repo/.modules:/opt/puppetlabs/bolt/lib/ruby/gems/2.7.0/gems/bolt-3.30.0/modules
+2024-10-27T01:37:19.573903 DEBUG  [main] [Bolt::Inventory] Loaded inventory from /root/control-repo/inventory.yaml
+2024-10-27T01:37:19.602148 INFO   [event-publisher] [Bolt::Outputter::Logger] Starting: command 'touch /tmp/walou.cvb' on agent1.poc.com, agent2.virtualbox.org
+2024-10-27T01:37:19.764001 INFO   [exec-worker-1] [Bolt::Executor] Running command 'touch /tmp/walou.cvb' on ["agent1.poc.com"]
+2024-10-27T01:37:19.764267 DEBUG  [exec-worker-1] [Bolt::Transport::SSH] Running command 'touch /tmp/walou.cvb' on agent1.poc.com
+2024-10-27T01:37:19.764735 INFO   [exec-worker-2] [Bolt::Executor] Running command 'touch /tmp/walou.cvb' on ["agent2.virtualbox.org"]
+2024-10-27T01:37:19.764865 DEBUG  [exec-worker-2] [Bolt::Transport::SSH] Running command 'touch /tmp/walou.cvb' on agent2.virtualbox.org
+2024-10-27T01:37:19.770927 DEBUG  [exec-worker-2] [agent2.virtualbox.org] Disabling use_agent in net-ssh: ssh-agent is not available
+2024-10-27T01:37:19.772849 DEBUG  [exec-worker-1] [agent1.poc.com] Disabling use_agent in net-ssh: ssh-agent is not available
+2024-10-27T01:37:20.021071 INFO   [exec-worker-1] [Bolt::Executor] {"target":"agent1.poc.com","action":"command","object":"touch /tmp/walou.cvb","status":"success","value":{"stdout":"","stderr":"","merged_output":"","exit_code":0}}
+2024-10-27T01:37:20.086340 INFO   [exec-worker-2] [Bolt::Executor] {"target":"agent2.virtualbox.org","action":"command","object":"touch /tmp/walou.cvb","status":"success","value":{"stdout":"","stderr":"","merged_output":"","exit_code":0}}
+2024-10-27T01:37:20.088020 INFO   [event-publisher] [Bolt::Outputter::Logger] Finished: command 'touch /tmp/walou.cvb' with 0 failures in 0.49 sec

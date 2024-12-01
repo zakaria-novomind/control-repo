@@ -1,0 +1,13 @@
+{
+  "description": "Return the size of a file in bytes",
+  "parameters": {
+    "path": {
+      "type": "String",
+      "description": "Path to the file to return the size of"
+    }
+  },
+  "implementations": [
+    {"name": "filesize.sh", "requirements": ["shell"],  "input_method": "environment"},
+    {"name": "filesize.ps1", "requirements": ["powershell"], "input_method": "powershell"}
+  ]
+}

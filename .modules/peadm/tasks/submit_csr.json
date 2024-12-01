@@ -1,0 +1,13 @@
+{
+  "description": "Submit a certificate signing request",
+  "parameters": {
+    "dns_alt_names": {
+      "type": "Optional[Array[String]]",
+      "description": "DNS Alternative Names to request for the certificate"
+    }
+  },
+  "implementations": [
+    {"name": "submit_csr.rb", "requirements": ["shell"]},
+    {"name": "submit_csr.ps1", "requirements": ["powershell"]}
+  ]
+}

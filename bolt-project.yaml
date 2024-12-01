@@ -1,0 +1,5 @@
+---
+name: mzboltproject
+modules:
+- puppetlabs/peadm
+- puppetlabs/puppet_agent

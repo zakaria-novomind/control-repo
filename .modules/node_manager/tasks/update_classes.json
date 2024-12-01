@@ -1,0 +1,10 @@
+{
+  "description": "Kick off update classes",
+  "input_method": "stdin",
+  "parameters": {
+    "environment": {
+      "description": "Environment to update",
+      "type": "Optional[String[1]]"
+    }
+  }
+}

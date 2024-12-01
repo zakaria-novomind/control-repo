@@ -1,0 +1,28 @@
+{
+  "description": "Install Puppet Enterprise from a tarball",
+  "parameters": {
+    "tarball": {
+      "type": "String",
+      "description": "The path to the Puppet Enterprise tarball"
+    },
+    "peconf": {
+      "type": "Optional[String]",
+      "description": "The path to the pe.conf file"
+    },
+    "install_extra_large": {
+      "type": "Optional[Boolean]",
+      "description": "If true, optimize task for known manual issues with extra-large installs. Do not use for upgrades"
+    },
+    "puppet_service_ensure": {
+      "type": "Optional[Enum['stopped']]",
+      "description": "If 'stopped', ensure the Puppet agent is not running when install completes"
+    }
+  },
+  "input_method": "environment",
+  "files": [
+    "peadm/files/task_helper.sh"
+  ],
+  "implementations": [
+    {"name": "pe_install.sh"}
+  ]
+}
